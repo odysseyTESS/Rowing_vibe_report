@@ -14,7 +14,9 @@ SLACK_WEBHOOK_URL = st.secrets["SLACK_WEBHOOK_URL"]
 
 # Geminiのセットアップ
 genai.configure(api_key=GEMINI_API_KEY)
-model = genai.GenerativeModel("gemini-1.5-flash") # 爆速モデル
+# app.pyの該当箇所を以下に書き換え
+model = genai.GenerativeModel(model_name="gemini-1.5-flash") 
+
 
 # --- UI部分 ---
 uploaded_file = st.file_uploader("音声ファイル (m4a) をアップロード", type=["m4a"])
