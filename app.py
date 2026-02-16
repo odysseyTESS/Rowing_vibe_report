@@ -15,7 +15,7 @@ SLACK_WEBHOOK_URL = st.secrets["SLACK_WEBHOOK_URL"]
 # Geminiのセットアップ
 genai.configure(api_key=GEMINI_API_KEY)
 # app.pyの該当箇所を以下に書き換え
-model = genai.GenerativeModel(model_name="gemini-1.5-flash") 
+model_name="gemini-1.5-flash-latest" 
 
 
 # --- UI部分 ---
